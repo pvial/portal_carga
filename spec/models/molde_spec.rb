@@ -4,6 +4,8 @@ RSpec.describe Molde, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:drafts) }
+
     it { should have_many(:ejercicios) }
 
     end

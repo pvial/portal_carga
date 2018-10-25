@@ -4,6 +4,8 @@ RSpec.describe PreEx, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:molde) }
+
     it { should belong_to(:contenido) }
 
     it { should have_many(:ejercicios) }

@@ -1,6 +1,8 @@
 class PreEx < ApplicationRecord
   # Direct associations
 
+  belongs_to :molde
+
   belongs_to :contenido,
              :class_name => "Contentido"
 
