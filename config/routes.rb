@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Contentido resource:
+
+  # CREATE
+  get("/contentidos/new", { :controller => "contentidos", :action => "new_form" })
+  post("/create_contentido", { :controller => "contentidos", :action => "create_row" })
+
+  # READ
+  get("/contentidos", { :controller => "contentidos", :action => "index" })
+  get("/contentidos/:id_to_display", { :controller => "contentidos", :action => "show" })
+
+  # UPDATE
+  get("/contentidos/:prefill_with_id/edit", { :controller => "contentidos", :action => "edit_form" })
+  post("/update_contentido/:id_to_modify", { :controller => "contentidos", :action => "update_row" })
+
+  # DELETE
+  get("/delete_contentido/:id_to_remove", { :controller => "contentidos", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Pre ex resource:
 
   # CREATE
