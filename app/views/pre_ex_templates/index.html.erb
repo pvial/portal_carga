@@ -1,0 +1,242 @@
+<div class="row mb-3">
+  <div class="col-md-12">
+    <h1>
+      All pre exes
+    </h1>
+
+    <a href="/pre_exes/new" class="btn btn-block btn-outline-secondary">
+      Add a new pre ex
+    </a>
+  </div>
+</div>
+
+<!-- Ransack Code start -->
+
+<!-- Ransack Code end -->
+
+<!-- Location Map Code start -->
+
+<!-- Location Map Code end -->
+
+<hr>
+
+<div class="row mb-3">
+  <div class="col-md-12">
+    <table class="table">
+      <tr>
+        <th>
+          ID
+        </th>
+
+        <th>
+          Contenido
+        </th>
+
+        <th>
+          Molde
+        </th>
+
+        <th>
+          Enunciado
+        </th>
+
+        <th>
+          Imagen
+        </th>
+
+        <th>
+          Resp correcta
+        </th>
+
+        <th>
+          W1
+        </th>
+
+        <th>
+          W2
+        </th>
+
+        <th>
+          W3
+        </th>
+
+        <th>
+          W4
+        </th>
+
+        <th>
+          Op1
+        </th>
+
+        <th>
+          Op2
+        </th>
+
+        <th>
+          Op3
+        </th>
+
+        <th>
+          Op4
+        </th>
+
+        <th>
+          Op5
+        </th>
+
+        <th>
+          Hint
+        </th>
+
+        <th>
+          Dificultad
+        </th>
+
+        <th>
+          Habilidad
+        </th>
+
+        <th>
+          Created at
+        </th>
+
+        <th>
+          Updated at
+        </th>
+
+        <th>
+        </th>
+      </tr>
+
+      <% @pre_exes.each do |pre_ex| %>
+      <tr>
+        <!-- Display pre_ex.id start -->
+        <td>
+          <%= pre_ex.id %>
+        </td>
+        <!-- Display pre_ex.id end -->
+
+        <!-- Display pre_ex.contenido_id start -->
+        <td>
+          <%= pre_ex.contenido_id %>
+        </td>
+        <!-- Display pre_ex.contenido_id end -->
+
+        <!-- Display pre_ex.molde_id start -->
+        <td>
+          <%= pre_ex.molde_id %>
+        </td>
+        <!-- Display pre_ex.molde_id end -->
+
+        <!-- Display pre_ex.enunciado start -->
+        <td>
+          <%= pre_ex.enunciado %>
+        </td>
+        <!-- Display pre_ex.enunciado end -->
+
+        <!-- Display pre_ex.imagen start -->
+        <td>
+          <%= pre_ex.imagen %>
+        </td>
+        <!-- Display pre_ex.imagen end -->
+
+        <!-- Display pre_ex.resp_correcta start -->
+        <td>
+          <%= pre_ex.resp_correcta %>
+        </td>
+        <!-- Display pre_ex.resp_correcta end -->
+
+        <!-- Display pre_ex.w1 start -->
+        <td>
+          <%= pre_ex.w1 %>
+        </td>
+        <!-- Display pre_ex.w1 end -->
+
+        <!-- Display pre_ex.w2 start -->
+        <td>
+          <%= pre_ex.w2 %>
+        </td>
+        <!-- Display pre_ex.w2 end -->
+
+        <!-- Display pre_ex.w3 start -->
+        <td>
+          <%= pre_ex.w3 %>
+        </td>
+        <!-- Display pre_ex.w3 end -->
+
+        <!-- Display pre_ex.w4 start -->
+        <td>
+          <%= pre_ex.w4 %>
+        </td>
+        <!-- Display pre_ex.w4 end -->
+
+        <!-- Display pre_ex.op1 start -->
+        <td>
+          <%= pre_ex.op1 %>
+        </td>
+        <!-- Display pre_ex.op1 end -->
+
+        <!-- Display pre_ex.op2 start -->
+        <td>
+          <%= pre_ex.op2 %>
+        </td>
+        <!-- Display pre_ex.op2 end -->
+
+        <!-- Display pre_ex.op3 start -->
+        <td>
+          <%= pre_ex.op3 %>
+        </td>
+        <!-- Display pre_ex.op3 end -->
+
+        <!-- Display pre_ex.op4 start -->
+        <td>
+          <%= pre_ex.op4 %>
+        </td>
+        <!-- Display pre_ex.op4 end -->
+
+        <!-- Display pre_ex.op5 start -->
+        <td>
+          <%= pre_ex.op5 %>
+        </td>
+        <!-- Display pre_ex.op5 end -->
+
+        <!-- Display pre_ex.hint start -->
+        <td>
+          <%= pre_ex.hint %>
+        </td>
+        <!-- Display pre_ex.hint end -->
+
+        <!-- Display pre_ex.dificultad start -->
+        <td>
+          <%= pre_ex.dificultad %>
+        </td>
+        <!-- Display pre_ex.dificultad end -->
+
+        <!-- Display pre_ex.habilidad start -->
+        <td>
+          <%= pre_ex.habilidad %>
+        </td>
+        <!-- Display pre_ex.habilidad end -->
+
+        <!-- Display pre_ex.created_at start -->
+        <td>
+          <%= time_ago_in_words(pre_ex.created_at) %> ago
+        </td>
+        <!-- Display pre_ex.created_at end -->
+
+        <!-- Display pre_ex.updated_at start -->
+        <td>
+          <%= time_ago_in_words(pre_ex.updated_at) %> ago
+        </td>
+        <!-- Display pre_ex.updated_at end -->
+
+        <td>
+          <a href="/pre_exes/<%= pre_ex.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
