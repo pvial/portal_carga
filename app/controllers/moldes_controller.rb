@@ -1,6 +1,7 @@
 class MoldesController < ApplicationController
   def index
-    @moldes = Molde.page(params[:page]).per(10)
+    @q = Molde.ransack(params[:q])
+    @moldes = @q.result(:distinct => true).includes(:ejercicios, :drafts).page(params[:page]).per(10)
 
     render("molde_templates/index.html.erb")
   end

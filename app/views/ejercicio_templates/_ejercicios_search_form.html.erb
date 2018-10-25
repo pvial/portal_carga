@@ -1,0 +1,216 @@
+<%= search_form_for @q, :class => collapse_search_form, :id => "ejercicios_filters" do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :aprobado_eq, "Aprobado" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :aprobado_eq, "1", checked: ((params[:q] && params[:q][:aprobado_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :aprobado_eq, "0", checked: ((params[:q] && params[:q][:aprobado_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :aprobado_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :habilidad_cont, "Habilidad contains" %>
+    <%= f.text_field :habilidad_cont, :class => "form-control", :placeholder => "Habilidad contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :dificultad, "Dificultad" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <%= f.text_field :dificultad_gteq, :class => "form-control", :placeholder => "Dificultad greater than or equal to" %>
+      </div>
+      <div class='col-md-6'>
+        <%= f.text_field :dificultad_lteq, :class => "form-control", :placeholder => "Dificultad less than or equal to" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :hint_cont, "Hint contains" %>
+    <%= f.text_field :hint_cont, :class => "form-control", :placeholder => "Hint contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :op5_cont, "Op5 contains" %>
+    <%= f.text_field :op5_cont, :class => "form-control", :placeholder => "Op5 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :op4_cont, "Op4 contains" %>
+    <%= f.text_field :op4_cont, :class => "form-control", :placeholder => "Op4 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :op3_cont, "Op3 contains" %>
+    <%= f.text_field :op3_cont, :class => "form-control", :placeholder => "Op3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :op2_cont, "Op2 contains" %>
+    <%= f.text_field :op2_cont, :class => "form-control", :placeholder => "Op2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :op1_cont, "Op1 contains" %>
+    <%= f.text_field :op1_cont, :class => "form-control", :placeholder => "Op1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :w4_cont, "W4 contains" %>
+    <%= f.text_field :w4_cont, :class => "form-control", :placeholder => "W4 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :w3_cont, "W3 contains" %>
+    <%= f.text_field :w3_cont, :class => "form-control", :placeholder => "W3 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :w2_cont, "W2 contains" %>
+    <%= f.text_field :w2_cont, :class => "form-control", :placeholder => "W2 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :w1_cont, "W1 contains" %>
+    <%= f.text_field :w1_cont, :class => "form-control", :placeholder => "W1 contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :resp_correcta_cont, "Resp correcta contains" %>
+    <%= f.text_field :resp_correcta_cont, :class => "form-control", :placeholder => "Resp correcta contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :enunciado_cont, "Enunciado contains" %>
+    <%= f.text_field :enunciado_cont, :class => "form-control", :placeholder => "Enunciado contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :comentario_cont, "Comentario contains" %>
+    <%= f.text_field :comentario_cont, :class => "form-control", :placeholder => "Comentario contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :bandera_eq, "Bandera" %>
+    <div>
+      <label class="radio-inline">
+        <%= f.radio_button :bandera_eq, "1", checked: ((params[:q] && params[:q][:bandera_eq]) == "1" ? "checked" : "") %> Yes
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :bandera_eq, "0", checked: ((params[:q] && params[:q][:bandera_eq]) == "0" ? "checked" : "")%> No
+      </label>
+      <label class="radio-inline">
+        <%= f.radio_button :bandera_eq, ""%> Either
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :created_at, "Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='created_atgteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Created at greater than or equal to", :data => {:target => '#created_atgteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atgteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='created_atlteqPicker' data-target-input="nearest">
+          <%= f.text_field :created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Created at less than or equal to", :data => {:target => '#created_atlteqPicker'} %>
+          <div class="input-group-append" data-target='#created_atlteqPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#created_atgteqPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atlteqPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#created_atgteqPicker').on("dp.change", function (e) {
+              $('#created_atlteqPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#created_atlteqPicker').on("dp.change", function (e) {
+              $('#created_atgteqPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+
+  <div class="form-group">
+    <%= f.label :created_at, "Molde Created at" %>
+    <div class="row">
+      <div class='col-md-6 mb-1'>
+        <div class='input-group date' id='moldegteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :molde_created_at_gteq, :class => "form-control datetimepicker-input", :placeholder => "Molde Created at greater than or equal to", :data => {:target => '#moldegteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#moldegteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6'>
+        <div class='input-group date' id='moldelteqcreated_atPicker' data-target-input="nearest">
+          <%= f.text_field :molde_created_at_lteq, :class => "form-control datetimepicker-input", :placeholder => "Molde Created at less than or equal to", :data => {:target => '#moldelteqcreated_atPicker'} %>
+          <div class="input-group-append" data-target='#moldelteqcreated_atPicker' data-toggle="datetimepicker">
+            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+      $(function () {
+          $('#moldegteqcreated_atPicker').datetimepicker({
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#moldelteqcreated_atPicker').datetimepicker({
+              useCurrent: false,
+              format: 'YYYY-MM-DD hh:mm:SS'
+          });
+          $('#moldegteqcreated_atPicker').on("dp.change", function (e) {
+              $('#moldelteqcreated_atPicker').data("DateTimePicker").minDate(e.date);
+          });
+          $('#moldelteqcreated_atPicker').on("dp.change", function (e) {
+              $('#moldegteqcreated_atPicker').data("DateTimePicker").maxDate(e.date);
+          });
+      });
+  </script>
+
+  <div class="form-group">
+    <%= f.label :creador_email_cont, "Creador email contains" %>
+    <%= f.text_field :creador_email_cont, :class => "form-control", :placeholder => "Creador email contains" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :aprobador_email_cont, "Aprobador email contains" %>
+    <%= f.text_field :aprobador_email_cont, :class => "form-control", :placeholder => "Aprobador email contains" %>
+  </div>
+
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/ejercicios" class="btn btn-outline-secondary btn-block mb-1">Clear filters</a>
+
+<% end %>
+
+<a class="btn btn-outline-secondary btn-block mb-1" data-toggle="collapse" href="#ejercicios_filters">
+  Show filters
+</a>

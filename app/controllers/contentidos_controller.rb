@@ -1,6 +1,7 @@
 class ContentidosController < ApplicationController
   def index
-    @contentidos = Contentido.page(params[:page]).per(10)
+    @q = Contentido.ransack(params[:q])
+    @contentidos = @q.result(:distinct => true).includes(:drafts, :ejercicios, :eje).page(params[:page]).per(10)
 
     render("contentido_templates/index.html.erb")
   end

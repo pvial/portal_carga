@@ -1,6 +1,7 @@
 class PreExesController < ApplicationController
   def index
-    @pre_exes = PreEx.page(params[:page]).per(10)
+    @q = PreEx.ransack(params[:q])
+    @pre_exes = @q.result(:distinct => true).includes(:ejercicios, :contenido, :molde).page(params[:page]).per(10)
 
     render("pre_ex_templates/index.html.erb")
   end

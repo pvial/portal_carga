@@ -10,7 +10,8 @@ class EjerciciosController < ApplicationController
   end
 
   def index
-    @ejercicios = Ejercicio.page(params[:page]).per(10)
+    @q = Ejercicio.ransack(params[:q])
+    @ejercicios = @q.result(:distinct => true).includes(:last_pre_ex, :contenido, :molde, :creador, :aprobador).page(params[:page]).per(10)
 
     render("ejercicio_templates/index.html.erb")
   end
