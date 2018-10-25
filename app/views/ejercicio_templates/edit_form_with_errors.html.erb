@@ -275,7 +275,7 @@
     </label>
 
     <!-- Input for creador_id start -->
-    <input type="text" id="creador_id" name="creador_id" class="form-control" value="<%= @ejercicio.creador_id %>">
+    <%= select_tag(:creador_id, options_from_collection_for_select(Creador.all, :id, :email, @ejercicio.creador_id), :class => "form-control") %>
     <!-- Input for creador_id end -->
   </div>
   <!-- Label and input for creador_id end -->
