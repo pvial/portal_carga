@@ -63,6 +63,9 @@ Rails.application.routes.draw do
   # CREATE
   get("/ejercicios/new", { :controller => "ejercicios", :action => "new_form" })
   post("/create_ejercicio", { :controller => "ejercicios", :action => "create_row" })
+  post("/create_ejercicio_from_molde", { :controller => "ejercicios", :action => "create_row_from_molde" })
+  post("/create_ejercicio_from_contentido", { :controller => "ejercicios", :action => "create_row_from_contentido" })
+  post("/create_ejercicio_from_pre_ex", { :controller => "ejercicios", :action => "create_row_from_pre_ex" })
 
   # READ
   get("/ejercicios", { :controller => "ejercicios", :action => "index" })
@@ -87,6 +90,7 @@ Rails.application.routes.draw do
   # CREATE
   get("/contentidos/new", { :controller => "contentidos", :action => "new_form" })
   post("/create_contentido", { :controller => "contentidos", :action => "create_row" })
+  post("/create_contentido_from_eje", { :controller => "contentidos", :action => "create_row_from_eje" })
 
   # READ
   get("/contentidos", { :controller => "contentidos", :action => "index" })
@@ -107,6 +111,8 @@ Rails.application.routes.draw do
   # CREATE
   get("/pre_exes/new", { :controller => "pre_exes", :action => "new_form" })
   post("/create_pre_ex", { :controller => "pre_exes", :action => "create_row" })
+  post("/create_pre_ex_from_molde", { :controller => "pre_exes", :action => "create_row_from_molde" })
+  post("/create_pre_ex_from_contentido", { :controller => "pre_exes", :action => "create_row_from_contentido" })
 
   # READ
   get("/pre_exes", { :controller => "pre_exes", :action => "index" })

@@ -6,6 +6,8 @@ class ContentidosController < ApplicationController
   end
 
   def show
+    @ejercicio = Ejercicio.new
+    @pre_ex = PreEx.new
     @contentido = Contentido.find(params.fetch("id_to_display"))
 
     render("contentido_templates/show.html.erb")
@@ -26,6 +28,20 @@ class ContentidosController < ApplicationController
       @contentido.save
 
       redirect_back(:fallback_location => "/contentidos", :notice => "Contentido created successfully.")
+    else
+      render("contentido_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_eje
+    @contentido = Contentido.new
+
+    @contentido.eje_id = params.fetch("eje_id")
+
+    if @contentido.valid?
+      @contentido.save
+
+      redirect_to("/ejes/#{@contentido.eje_id}", notice: "Contentido created successfully.")
     else
       render("contentido_templates/new_form_with_errors.html.erb")
     end

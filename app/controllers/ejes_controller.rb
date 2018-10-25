@@ -6,6 +6,7 @@ class EjesController < ApplicationController
   end
 
   def show
+    @contentido = Contentido.new
     @eje = Eje.find(params.fetch("id_to_display"))
 
     render("eje_templates/show.html.erb")

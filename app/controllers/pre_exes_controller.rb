@@ -6,6 +6,7 @@ class PreExesController < ApplicationController
   end
 
   def show
+    @ejercicio = Ejercicio.new
     @pre_ex = PreEx.find(params.fetch("id_to_display"))
 
     render("pre_ex_templates/show.html.erb")
@@ -42,6 +43,66 @@ class PreExesController < ApplicationController
       @pre_ex.save
 
       redirect_back(:fallback_location => "/pre_exes", :notice => "Pre ex created successfully.")
+    else
+      render("pre_ex_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_contentido
+    @pre_ex = PreEx.new
+
+    @pre_ex.contenido_id = params.fetch("contenido_id")
+    @pre_ex.molde_id = params.fetch("molde_id")
+    @pre_ex.enunciado = params.fetch("enunciado")
+    @pre_ex.imagen = params.fetch("imagen")
+    @pre_ex.resp_correcta = params.fetch("resp_correcta")
+    @pre_ex.w1 = params.fetch("w1")
+    @pre_ex.w2 = params.fetch("w2")
+    @pre_ex.w3 = params.fetch("w3")
+    @pre_ex.w4 = params.fetch("w4")
+    @pre_ex.op1 = params.fetch("op1")
+    @pre_ex.op2 = params.fetch("op2")
+    @pre_ex.op3 = params.fetch("op3")
+    @pre_ex.op4 = params.fetch("op4")
+    @pre_ex.op5 = params.fetch("op5")
+    @pre_ex.hint = params.fetch("hint")
+    @pre_ex.dificultad = params.fetch("dificultad")
+    @pre_ex.habilidad = params.fetch("habilidad")
+
+    if @pre_ex.valid?
+      @pre_ex.save
+
+      redirect_to("/contentidos/#{@pre_ex.contenido_id}", notice: "PreEx created successfully.")
+    else
+      render("pre_ex_templates/new_form_with_errors.html.erb")
+    end
+  end
+
+  def create_row_from_molde
+    @pre_ex = PreEx.new
+
+    @pre_ex.contenido_id = params.fetch("contenido_id")
+    @pre_ex.molde_id = params.fetch("molde_id")
+    @pre_ex.enunciado = params.fetch("enunciado")
+    @pre_ex.imagen = params.fetch("imagen")
+    @pre_ex.resp_correcta = params.fetch("resp_correcta")
+    @pre_ex.w1 = params.fetch("w1")
+    @pre_ex.w2 = params.fetch("w2")
+    @pre_ex.w3 = params.fetch("w3")
+    @pre_ex.w4 = params.fetch("w4")
+    @pre_ex.op1 = params.fetch("op1")
+    @pre_ex.op2 = params.fetch("op2")
+    @pre_ex.op3 = params.fetch("op3")
+    @pre_ex.op4 = params.fetch("op4")
+    @pre_ex.op5 = params.fetch("op5")
+    @pre_ex.hint = params.fetch("hint")
+    @pre_ex.dificultad = params.fetch("dificultad")
+    @pre_ex.habilidad = params.fetch("habilidad")
+
+    if @pre_ex.valid?
+      @pre_ex.save
+
+      redirect_to("/moldes/#{@pre_ex.molde_id}", notice: "PreEx created successfully.")
     else
       render("pre_ex_templates/new_form_with_errors.html.erb")
     end

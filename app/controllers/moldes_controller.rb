@@ -6,6 +6,8 @@ class MoldesController < ApplicationController
   end
 
   def show
+    @pre_ex = PreEx.new
+    @ejercicio = Ejercicio.new
     @molde = Molde.find(params.fetch("id_to_display"))
 
     render("molde_templates/show.html.erb")
