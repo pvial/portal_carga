@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Ejercicio resource:
+
+  # CREATE
+  get("/ejercicios/new", { :controller => "ejercicios", :action => "new_form" })
+  post("/create_ejercicio", { :controller => "ejercicios", :action => "create_row" })
+
+  # READ
+  get("/ejercicios", { :controller => "ejercicios", :action => "index" })
+  get("/ejercicios/:id_to_display", { :controller => "ejercicios", :action => "show" })
+
+  # UPDATE
+  get("/ejercicios/:prefill_with_id/edit", { :controller => "ejercicios", :action => "edit_form" })
+  post("/update_ejercicio/:id_to_modify", { :controller => "ejercicios", :action => "update_row" })
+
+  # DELETE
+  get("/delete_ejercicio/:id_to_remove", { :controller => "ejercicios", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Contentido resource:
 
   # CREATE

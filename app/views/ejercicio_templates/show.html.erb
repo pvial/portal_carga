@@ -1,0 +1,262 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Ejercicio #<%= @ejercicio.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/ejercicios" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link ejercicio start -->
+      <div class="col">
+        <a href="/ejercicios/<%= @ejercicio.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit ejercicio
+        </a>
+      </div>
+      <!-- Edit link ejercicio end -->
+
+      <!-- Delete link ejercicio start -->
+      <div class="col">
+        <a href="/delete_ejercicio/<%= @ejercicio.id %>" class="btn btn-block btn-outline-secondary">
+          Delete ejercicio
+        </a>
+      </div>
+      <!-- Delete link ejercicio end -->
+    </div>
+
+    <dl>
+      <dt>
+        Aprobado
+      </dt>
+      <!-- Display aprobado start -->
+      <dd>
+        <%= @ejercicio.aprobado %>
+      </dd>
+      <!-- Display aprobado end -->
+
+      <dt>
+        Contenido
+      </dt>
+      <!-- Display contenido_id start -->
+      <dd>
+        <%= @ejercicio.contenido_id %>
+      </dd>
+      <!-- Display contenido_id end -->
+
+      <dt>
+        Bandera
+      </dt>
+      <!-- Display bandera start -->
+      <dd>
+        <%= @ejercicio.bandera %>
+      </dd>
+      <!-- Display bandera end -->
+
+      <dt>
+        Comentario
+      </dt>
+      <!-- Display comentario start -->
+      <dd>
+        <%= @ejercicio.comentario %>
+      </dd>
+      <!-- Display comentario end -->
+
+      <dt>
+        Molde
+      </dt>
+      <!-- Display molde_id start -->
+      <dd>
+        <%= @ejercicio.molde_id %>
+      </dd>
+      <!-- Display molde_id end -->
+
+      <dt>
+        Enunciado
+      </dt>
+      <!-- Display enunciado start -->
+      <dd>
+        <%= @ejercicio.enunciado %>
+      </dd>
+      <!-- Display enunciado end -->
+
+      <dt>
+        Imagen
+      </dt>
+      <!-- Display imagen start -->
+      <dd>
+        <%= @ejercicio.imagen %>
+      </dd>
+      <!-- Display imagen end -->
+
+      <dt>
+        Resp correcta
+      </dt>
+      <!-- Display resp_correcta start -->
+      <dd>
+        <%= @ejercicio.resp_correcta %>
+      </dd>
+      <!-- Display resp_correcta end -->
+
+      <dt>
+        W1
+      </dt>
+      <!-- Display w1 start -->
+      <dd>
+        <%= @ejercicio.w1 %>
+      </dd>
+      <!-- Display w1 end -->
+
+      <dt>
+        W2
+      </dt>
+      <!-- Display w2 start -->
+      <dd>
+        <%= @ejercicio.w2 %>
+      </dd>
+      <!-- Display w2 end -->
+
+      <dt>
+        W3
+      </dt>
+      <!-- Display w3 start -->
+      <dd>
+        <%= @ejercicio.w3 %>
+      </dd>
+      <!-- Display w3 end -->
+
+      <dt>
+        W4
+      </dt>
+      <!-- Display w4 start -->
+      <dd>
+        <%= @ejercicio.w4 %>
+      </dd>
+      <!-- Display w4 end -->
+
+      <dt>
+        Op1
+      </dt>
+      <!-- Display op1 start -->
+      <dd>
+        <%= @ejercicio.op1 %>
+      </dd>
+      <!-- Display op1 end -->
+
+      <dt>
+        Op2
+      </dt>
+      <!-- Display op2 start -->
+      <dd>
+        <%= @ejercicio.op2 %>
+      </dd>
+      <!-- Display op2 end -->
+
+      <dt>
+        Op3
+      </dt>
+      <!-- Display op3 start -->
+      <dd>
+        <%= @ejercicio.op3 %>
+      </dd>
+      <!-- Display op3 end -->
+
+      <dt>
+        Op4
+      </dt>
+      <!-- Display op4 start -->
+      <dd>
+        <%= @ejercicio.op4 %>
+      </dd>
+      <!-- Display op4 end -->
+
+      <dt>
+        Op5
+      </dt>
+      <!-- Display op5 start -->
+      <dd>
+        <%= @ejercicio.op5 %>
+      </dd>
+      <!-- Display op5 end -->
+
+      <dt>
+        Hint
+      </dt>
+      <!-- Display hint start -->
+      <dd>
+        <%= @ejercicio.hint %>
+      </dd>
+      <!-- Display hint end -->
+
+      <dt>
+        Dificultad
+      </dt>
+      <!-- Display dificultad start -->
+      <dd>
+        <%= @ejercicio.dificultad %>
+      </dd>
+      <!-- Display dificultad end -->
+
+      <dt>
+        Habilidad
+      </dt>
+      <!-- Display habilidad start -->
+      <dd>
+        <%= @ejercicio.habilidad %>
+      </dd>
+      <!-- Display habilidad end -->
+
+      <dt>
+        Last pre ex
+      </dt>
+      <!-- Display last_pre_ex_id start -->
+      <dd>
+        <%= @ejercicio.last_pre_ex_id %>
+      </dd>
+      <!-- Display last_pre_ex_id end -->
+
+      <dt>
+        Creador
+      </dt>
+      <!-- Display creador_id start -->
+      <dd>
+        <%= @ejercicio.creador_id %>
+      </dd>
+      <!-- Display creador_id end -->
+
+      <dt>
+        Aprobador
+      </dt>
+      <!-- Display aprobador_id start -->
+      <dd>
+        <%= @ejercicio.aprobador_id %>
+      </dd>
+      <!-- Display aprobador_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@ejercicio.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@ejercicio.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
