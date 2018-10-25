@@ -1,6 +1,8 @@
 class Ejercicio < ApplicationRecord
   # Direct associations
 
+  belongs_to :creador
+
   belongs_to :molde,
              :counter_cache => true
 

@@ -4,6 +4,8 @@ RSpec.describe Ejercicio, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:creador) }
+
     it { should belong_to(:molde) }
 
     it { should belong_to(:contenido) }

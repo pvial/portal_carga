@@ -1,6 +1,8 @@
 class Creador < ApplicationRecord
   # Direct associations
 
+  has_many   :ejercicios
+
   # Indirect associations
 
   # Validations
