@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link pre_ex start -->
       <div class="col">
         <a href="/pre_exes/<%= @pre_ex.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit pre ex
         </a>
       </div>
-      <!-- Edit link pre_ex end -->
 
-      <!-- Delete link pre_ex start -->
       <div class="col">
         <a href="/delete_pre_ex/<%= @pre_ex.id %>" class="btn btn-block btn-outline-secondary">
           Delete pre ex
         </a>
       </div>
-      <!-- Delete link pre_ex end -->
     </div>
 
     <dl>
       <dt>
         Contenido
       </dt>
-      <!-- Display contenido_id start -->
       <dd>
         <% if @pre_ex.contenido.present? %>
           <a href="/contentidos/<%= @pre_ex.contenido_id %>">
@@ -40,12 +35,10 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display contenido_id end -->
 
       <dt>
         Molde
       </dt>
-      <!-- Display molde_id start -->
       <dd>
         <% if @pre_ex.molde.present? %>
           <a href="/moldes/<%= @pre_ex.molde_id %>">
@@ -53,168 +46,131 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display molde_id end -->
 
       <dt>
         Enunciado
       </dt>
-      <!-- Display enunciado start -->
       <dd>
         <%= @pre_ex.enunciado %>
       </dd>
-      <!-- Display enunciado end -->
 
       <dt>
         Imagen
       </dt>
-      <!-- Display imagen start -->
       <dd>
         <img src="<%= @pre_ex.imagen %>" class="img-fluid">
       </dd>
-      <!-- Display imagen end -->
 
       <dt>
         Resp correcta
       </dt>
-      <!-- Display resp_correcta start -->
       <dd>
         <%= @pre_ex.resp_correcta %>
       </dd>
-      <!-- Display resp_correcta end -->
 
       <dt>
         W1
       </dt>
-      <!-- Display w1 start -->
       <dd>
         <%= @pre_ex.w1 %>
       </dd>
-      <!-- Display w1 end -->
 
       <dt>
         W2
       </dt>
-      <!-- Display w2 start -->
       <dd>
         <%= @pre_ex.w2 %>
       </dd>
-      <!-- Display w2 end -->
 
       <dt>
         W3
       </dt>
-      <!-- Display w3 start -->
       <dd>
         <%= @pre_ex.w3 %>
       </dd>
-      <!-- Display w3 end -->
 
       <dt>
         W4
       </dt>
-      <!-- Display w4 start -->
       <dd>
         <%= @pre_ex.w4 %>
       </dd>
-      <!-- Display w4 end -->
 
       <dt>
         Op1
       </dt>
-      <!-- Display op1 start -->
       <dd>
         <%= @pre_ex.op1 %>
       </dd>
-      <!-- Display op1 end -->
 
       <dt>
         Op2
       </dt>
-      <!-- Display op2 start -->
       <dd>
         <%= @pre_ex.op2 %>
       </dd>
-      <!-- Display op2 end -->
 
       <dt>
         Op3
       </dt>
-      <!-- Display op3 start -->
       <dd>
         <%= @pre_ex.op3 %>
       </dd>
-      <!-- Display op3 end -->
 
       <dt>
         Op4
       </dt>
-      <!-- Display op4 start -->
       <dd>
         <%= @pre_ex.op4 %>
       </dd>
-      <!-- Display op4 end -->
 
       <dt>
         Op5
       </dt>
-      <!-- Display op5 start -->
       <dd>
         <%= @pre_ex.op5 %>
       </dd>
-      <!-- Display op5 end -->
 
       <dt>
         Hint
       </dt>
-      <!-- Display hint start -->
       <dd>
         <%= @pre_ex.hint %>
       </dd>
-      <!-- Display hint end -->
 
       <dt>
         Dificultad
       </dt>
-      <!-- Display dificultad start -->
       <dd>
         <%= @pre_ex.dificultad %>
       </dd>
-      <!-- Display dificultad end -->
 
       <dt>
         Habilidad
       </dt>
-      <!-- Display habilidad start -->
       <dd>
         <%= @pre_ex.habilidad %>
       </dd>
-      <!-- Display habilidad end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@pre_ex.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@pre_ex.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "pre_ex_templates/pre_ex_ejercicios" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

@@ -11,46 +11,37 @@
         </a>
       </div>
 
-      <!-- Edit link molde start -->
       <div class="col">
         <a href="/moldes/<%= @molde.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit molde
         </a>
       </div>
-      <!-- Edit link molde end -->
 
-      <!-- Delete link molde start -->
       <div class="col">
         <a href="/delete_molde/<%= @molde.id %>" class="btn btn-block btn-outline-secondary">
           Delete molde
         </a>
       </div>
-      <!-- Delete link molde end -->
     </div>
 
     <dl>
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@molde.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@molde.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "molde_templates/molde_ejercicios" %>
@@ -62,4 +53,3 @@
     <%= render partial: "molde_templates/molde_drafts" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

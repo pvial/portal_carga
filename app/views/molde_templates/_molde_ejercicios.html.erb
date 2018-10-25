@@ -10,28 +10,22 @@
   <ul class="list-group list-group-flush">
     <% @molde.ejercicios.each do |ejercicio| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/ejercicios/<%= ejercicio.id %>">
           <%= ejercicio.aprobado %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <%if current_creador == ejercicio.creador %>
           <a href="/delete_ejercicio_from_molde/<%= ejercicio.id %>">
             Delete
           </a>
         <% end %>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="molde_ejercicios_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "molde_templates/molde_ejercicios_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

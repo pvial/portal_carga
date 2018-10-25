@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "ejercicio_templates/ejercicios_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -138,19 +134,14 @@
 
       <% @ejercicios.each do |ejercicio| %>
       <tr>
-        <!-- Display ejercicio.id start -->
         <td>
           <%= ejercicio.id %>
         </td>
-        <!-- Display ejercicio.id end -->
 
-        <!-- Display ejercicio.aprobado start -->
         <td>
           <%= ejercicio.aprobado %>
         </td>
-        <!-- Display ejercicio.aprobado end -->
 
-        <!-- Display ejercicio.contenido_id start -->
         <td>
           <% if ejercicio.contenido.present? %>
             <a href="/contentidos/<%= ejercicio.contenido.id %>">
@@ -158,21 +149,15 @@
             </a>
           <% end %>
         </td>
-        <!-- Display ejercicio.contenido_id end -->
 
-        <!-- Display ejercicio.bandera start -->
         <td>
           <%= ejercicio.bandera %>
         </td>
-        <!-- Display ejercicio.bandera end -->
 
-        <!-- Display ejercicio.comentario start -->
         <td>
           <%= ejercicio.comentario %>
         </td>
-        <!-- Display ejercicio.comentario end -->
 
-        <!-- Display ejercicio.molde_id start -->
         <td>
           <% if ejercicio.molde.present? %>
             <a href="/moldes/<%= ejercicio.molde.id %>">
@@ -180,99 +165,67 @@
             </a>
           <% end %>
         </td>
-        <!-- Display ejercicio.molde_id end -->
 
-        <!-- Display ejercicio.enunciado start -->
         <td>
           <%= ejercicio.enunciado %>
         </td>
-        <!-- Display ejercicio.enunciado end -->
 
-        <!-- Display ejercicio.imagen start -->
         <td>
           <img src='<%= ejercicio.imagen %>' class='img-fluid'>
         </td>
-        <!-- Display ejercicio.imagen end -->
 
-        <!-- Display ejercicio.resp_correcta start -->
         <td>
           <%= ejercicio.resp_correcta %>
         </td>
-        <!-- Display ejercicio.resp_correcta end -->
 
-        <!-- Display ejercicio.w1 start -->
         <td>
           <%= ejercicio.w1 %>
         </td>
-        <!-- Display ejercicio.w1 end -->
 
-        <!-- Display ejercicio.w2 start -->
         <td>
           <%= ejercicio.w2 %>
         </td>
-        <!-- Display ejercicio.w2 end -->
 
-        <!-- Display ejercicio.w3 start -->
         <td>
           <%= ejercicio.w3 %>
         </td>
-        <!-- Display ejercicio.w3 end -->
 
-        <!-- Display ejercicio.w4 start -->
         <td>
           <%= ejercicio.w4 %>
         </td>
-        <!-- Display ejercicio.w4 end -->
 
-        <!-- Display ejercicio.op1 start -->
         <td>
           <%= ejercicio.op1 %>
         </td>
-        <!-- Display ejercicio.op1 end -->
 
-        <!-- Display ejercicio.op2 start -->
         <td>
           <%= ejercicio.op2 %>
         </td>
-        <!-- Display ejercicio.op2 end -->
 
-        <!-- Display ejercicio.op3 start -->
         <td>
           <%= ejercicio.op3 %>
         </td>
-        <!-- Display ejercicio.op3 end -->
 
-        <!-- Display ejercicio.op4 start -->
         <td>
           <%= ejercicio.op4 %>
         </td>
-        <!-- Display ejercicio.op4 end -->
 
-        <!-- Display ejercicio.op5 start -->
         <td>
           <%= ejercicio.op5 %>
         </td>
-        <!-- Display ejercicio.op5 end -->
 
-        <!-- Display ejercicio.hint start -->
         <td>
           <%= ejercicio.hint %>
         </td>
-        <!-- Display ejercicio.hint end -->
 
-        <!-- Display ejercicio.dificultad start -->
         <td>
           <%= ejercicio.dificultad %>
         </td>
-        <!-- Display ejercicio.dificultad end -->
 
-        <!-- Display ejercicio.habilidad start -->
         <td>
           <%= ejercicio.habilidad %>
         </td>
-        <!-- Display ejercicio.habilidad end -->
 
-        <!-- Display ejercicio.last_pre_ex_id start -->
         <td>
           <% if ejercicio.last_pre_ex.present? %>
             <a href="/pre_exes/<%= ejercicio.last_pre_ex.id %>">
@@ -280,9 +233,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display ejercicio.last_pre_ex_id end -->
 
-        <!-- Display ejercicio.creador_id start -->
         <td>
           <% if ejercicio.creador.present? %>
             <a href="/creadors/<%= ejercicio.creador.id %>">
@@ -290,9 +241,7 @@
             </a>
           <% end %>
         </td>
-        <!-- Display ejercicio.creador_id end -->
 
-        <!-- Display ejercicio.aprobador_id start -->
         <td>
           <% if ejercicio.aprobador.present? %>
             <a href="/aprobadors/<%= ejercicio.aprobador.id %>">
@@ -300,19 +249,14 @@
             </a>
           <% end %>
         </td>
-        <!-- Display ejercicio.aprobador_id end -->
 
-        <!-- Display ejercicio.created_at start -->
         <td>
           <%= time_ago_in_words(ejercicio.created_at) %> ago
         </td>
-        <!-- Display ejercicio.created_at end -->
 
-        <!-- Display ejercicio.updated_at start -->
         <td>
           <%= time_ago_in_words(ejercicio.updated_at) %> ago
         </td>
-        <!-- Display ejercicio.updated_at end -->
 
         <td>
           <a href="/ejercicios/<%= ejercicio.id %>">

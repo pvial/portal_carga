@@ -11,28 +11,23 @@
         </a>
       </div>
 
-      <!-- Edit link contentido start -->
       <div class="col">
         <a href="/contentidos/<%= @contentido.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit contentido
         </a>
       </div>
-      <!-- Edit link contentido end -->
 
-      <!-- Delete link contentido start -->
       <div class="col">
         <a href="/delete_contentido/<%= @contentido.id %>" class="btn btn-block btn-outline-secondary">
           Delete contentido
         </a>
       </div>
-      <!-- Delete link contentido end -->
     </div>
 
     <dl>
       <dt>
         Eje
       </dt>
-      <!-- Display eje_id start -->
       <dd>
         <% if @contentido.eje.present? %>
           <a href="/ejes/<%= @contentido.eje_id %>">
@@ -40,30 +35,24 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display eje_id end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@contentido.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@contentido.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "contentido_templates/contentido_drafts" %>
@@ -75,4 +64,3 @@
     <%= render partial: "contentido_templates/contentido_ejercicios" %>
   </div>
 </div>
-<!-- Show Page Customization end -->

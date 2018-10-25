@@ -10,26 +10,20 @@
   <ul class="list-group list-group-flush">
     <% @molde.drafts.each do |pre_ex| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/pre_exes/<%= pre_ex.id %>">
           <%= pre_ex.contenido_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <a href="/delete_pre_ex_from_molde/<%= pre_ex.id %>">
           Delete
         </a>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="molde_drafts_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "molde_templates/molde_drafts_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

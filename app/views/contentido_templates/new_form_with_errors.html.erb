@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @contentido.present? %>
   <% if @contentido.errors.any? %>
     <% @contentido.errors.full_messages.each do |message| %>
@@ -16,21 +15,15 @@
 
 <hr>
 
-<!-- Form contentido start -->
 <form action="/create_contentido" method="post">
-<!-- Form contentido end -->
 
-  <!-- Label and input for eje_id start -->
   <div class="form-group">
     <label for="eje_id">
       Eje
     </label>
 
-    <!-- Input for eje_id start -->
     <%= select_tag(:eje_id, options_from_collection_for_select(Eje.all, :id, :created_at, @contentido.eje_id), :class => "form-control") %>
-    <!-- Input for eje_id end -->
   </div>
-  <!-- Label and input for eje_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create contentido
