@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "pre_exes#index"
   devise_for :aprobadors
   # Routes for the Aprobador resource:
 
