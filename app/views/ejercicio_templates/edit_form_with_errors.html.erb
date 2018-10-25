@@ -14,7 +14,7 @@
 <hr>
 
 <!-- Form ejercicio start -->
-<form action="/update_ejercicio/<%= @ejercicio.id %>" method="post">
+<form action="/update_ejercicio/<%= @ejercicio.id %>" method="post" enctype="multipart/form-data">
 <!-- Form ejercicio end -->
 
   <!-- Label and input for aprobado start -->
@@ -94,7 +94,8 @@
     </label>
 
     <!-- Input for imagen start -->
-    <input type="text" id="imagen" name="imagen" class="form-control" value="<%= @ejercicio.imagen %>">
+    <%= cl_image_tag(@ejercicio.imagen.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+    <input type="file" id="imagen" name="imagen" class="form-control">
     <!-- Input for imagen end -->
   </div>
   <!-- Label and input for imagen end -->

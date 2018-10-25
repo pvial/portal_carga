@@ -1,4 +1,6 @@
 class Ejercicio < ApplicationRecord
+  mount_uploader :imagen, ImagenUploader
+
   # Direct associations
 
   belongs_to :aprobador,

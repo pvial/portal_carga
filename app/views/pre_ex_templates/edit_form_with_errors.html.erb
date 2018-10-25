@@ -14,7 +14,7 @@
 <hr>
 
 <!-- Form pre_ex start -->
-<form action="/update_pre_ex/<%= @pre_ex.id %>" method="post">
+<form action="/update_pre_ex/<%= @pre_ex.id %>" method="post" enctype="multipart/form-data">
 <!-- Form pre_ex end -->
 
   <!-- Label and input for contenido_id start -->
@@ -60,7 +60,8 @@
     </label>
 
     <!-- Input for imagen start -->
-    <input type="text" id="imagen" name="imagen" class="form-control" value="<%= @pre_ex.imagen %>">
+    <%= cl_image_tag(@pre_ex.imagen.to_s, :width => 90, :height => 90, :crop => :thumb) %>
+    <input type="file" id="imagen" name="imagen" class="form-control">
     <!-- Input for imagen end -->
   </div>
   <!-- Label and input for imagen end -->

@@ -1,5 +1,5 @@
 <!-- Form ejercicio start -->
-<form action="/create_ejercicio_from_contentido" method="post">
+<form action="/create_ejercicio" method="post" enctype="multipart/form-data">
 <!-- Form ejercicio end -->
 
   <!-- Label and input for aprobado start -->
@@ -70,7 +70,7 @@
     </label>
 
     <!-- Input for imagen start -->
-    <input type="text" id="imagen" name="imagen" class="form-control" value="<%= @ejercicio.imagen %>">
+    <input type="file" id="imagen" name="imagen" class="form-control">
     <!-- Input for imagen end -->
   </div>
   <!-- Label and input for imagen end -->

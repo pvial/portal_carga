@@ -1,4 +1,6 @@
 class PreEx < ApplicationRecord
+  mount_uploader :imagen, ImagenUploader
+
   # Direct associations
 
   belongs_to :molde
