@@ -35,7 +35,7 @@
     </label>
 
     <!-- Input for contenido_id start -->
-    <input type="text" id="contenido_id" name="contenido_id" class="form-control" value="<%= @ejercicio.contenido_id %>">
+    <%= select_tag(:contenido_id, options_from_collection_for_select(Contentido.all, :id, :eje_id, @ejercicio.contenido_id), :class => "form-control") %>
     <!-- Input for contenido_id end -->
   </div>
   <!-- Label and input for contenido_id end -->
