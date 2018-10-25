@@ -4,6 +4,8 @@ RSpec.describe Ejercicio, type: :model do
   
     describe "Direct Associations" do
 
+    it { should belong_to(:last_pre_ex) }
+
     end
 
     describe "InDirect Associations" do
