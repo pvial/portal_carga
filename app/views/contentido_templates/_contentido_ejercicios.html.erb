@@ -17,9 +17,11 @@
         <!-- Show link end -->
 
         <!-- Delete link start -->
-        <a href="/delete_ejercicio_from_contenido/<%= ejercicio.id %>">
-          Delete
-        </a>
+        <%if current_creador == ejercicio.creador %>
+          <a href="/delete_ejercicio_from_contentido/<%= ejercicio.id %>">
+            Delete
+          </a>
+        <% end %>
         <!-- Delete link end -->
 
       </li>

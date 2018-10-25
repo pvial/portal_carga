@@ -13,17 +13,21 @@
 
       <!-- Edit link ejercicio start -->
       <div class="col">
-        <a href="/ejercicios/<%= @ejercicio.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit ejercicio
-        </a>
+        <% if current_creador == @ejercicio.creador %>
+          <a href="/ejercicios/<%= @ejercicio.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit ejercicio
+          </a>
+        <% end %>
       </div>
       <!-- Edit link ejercicio end -->
 
       <!-- Delete link ejercicio start -->
       <div class="col">
-        <a href="/delete_ejercicio/<%= @ejercicio.id %>" class="btn btn-block btn-outline-secondary">
-          Delete ejercicio
-        </a>
+        <% if current_creador == @ejercicio.creador %>
+          <a href="/delete_ejercicio/<%= @ejercicio.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete ejercicio
+          </a>
+        <% end %>
       </div>
       <!-- Delete link ejercicio end -->
     </div>
