@@ -254,7 +254,7 @@
     </label>
 
     <!-- Input for last_pre_ex_id start -->
-    <input type="text" id="last_pre_ex_id" name="last_pre_ex_id" class="form-control" value="<%= @ejercicio.last_pre_ex_id %>">
+    <%= select_tag(:last_pre_ex_id, options_from_collection_for_select(PreEx.all, :id, :contenido_id, @ejercicio.last_pre_ex_id), :class => "form-control") %>
     <!-- Input for last_pre_ex_id end -->
   </div>
   <!-- Label and input for last_pre_ex_id end -->
