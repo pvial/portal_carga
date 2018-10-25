@@ -1,6 +1,6 @@
 class ContentidosController < ApplicationController
   def index
-    @contentidos = Contentido.all
+    @contentidos = Contentido.page(params[:page]).per(10)
 
     render("contentido_templates/index.html.erb")
   end

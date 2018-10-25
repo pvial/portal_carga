@@ -1,6 +1,6 @@
 class PreExesController < ApplicationController
   def index
-    @pre_exes = PreEx.all
+    @pre_exes = PreEx.page(params[:page]).per(10)
 
     render("pre_ex_templates/index.html.erb")
   end

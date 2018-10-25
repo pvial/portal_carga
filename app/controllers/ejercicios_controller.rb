@@ -10,7 +10,7 @@ class EjerciciosController < ApplicationController
   end
 
   def index
-    @ejercicios = Ejercicio.all
+    @ejercicios = Ejercicio.page(params[:page]).per(10)
 
     render("ejercicio_templates/index.html.erb")
   end

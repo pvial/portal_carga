@@ -1,6 +1,6 @@
 class AprobadorsController < ApplicationController
   def index
-    @aprobadors = Aprobador.all
+    @aprobadors = Aprobador.page(params[:page]).per(10)
 
     render("aprobador_templates/index.html.erb")
   end

@@ -1,6 +1,6 @@
 class MoldesController < ApplicationController
   def index
-    @moldes = Molde.all
+    @moldes = Molde.page(params[:page]).per(10)
 
     render("molde_templates/index.html.erb")
   end

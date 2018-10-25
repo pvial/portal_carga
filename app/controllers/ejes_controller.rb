@@ -1,6 +1,6 @@
 class EjesController < ApplicationController
   def index
-    @ejes = Eje.all
+    @ejes = Eje.page(params[:page]).per(10)
 
     render("eje_templates/index.html.erb")
   end

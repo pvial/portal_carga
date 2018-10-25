@@ -1,6 +1,6 @@
 class CreadorsController < ApplicationController
   def index
-    @creadors = Creador.all
+    @creadors = Creador.page(params[:page]).per(10)
 
     render("creador_templates/index.html.erb")
   end
