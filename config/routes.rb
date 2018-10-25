@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :aprobadors
+  # Routes for the Aprobador resource:
+
+  # READ
+  get("/aprobadors", { :controller => "aprobadors", :action => "index" })
+  get("/aprobadors/:id_to_display", { :controller => "aprobadors", :action => "show" })
+
+  #------------------------------
+
   devise_for :creadors
   # Routes for the Creador resource:
 
