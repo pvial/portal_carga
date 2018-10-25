@@ -1,6 +1,8 @@
 class Aprobador < ApplicationRecord
   # Direct associations
 
+  has_many   :ejercicios
+
   # Indirect associations
 
   # Validations

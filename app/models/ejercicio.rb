@@ -1,6 +1,9 @@
 class Ejercicio < ApplicationRecord
   # Direct associations
 
+  belongs_to :aprobador,
+             :required => false
+
   belongs_to :creador
 
   belongs_to :molde,
