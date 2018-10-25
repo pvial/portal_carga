@@ -14,7 +14,7 @@
     </label>
 
     <!-- Input for molde_id start -->
-    <input type="text" id="molde_id" name="molde_id" class="form-control" value="<%= @pre_ex.molde_id %>">
+    <%= select_tag(:molde_id, options_from_collection_for_select(Molde.all, :id, :created_at, @pre_ex.molde_id), :class => "form-control") %>
     <!-- Input for molde_id end -->
   </div>
   <!-- Label and input for molde_id end -->
