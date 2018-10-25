@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Molde resource:
+
+  # CREATE
+  get("/moldes/new", { :controller => "moldes", :action => "new_form" })
+  post("/create_molde", { :controller => "moldes", :action => "create_row" })
+
+  # READ
+  get("/moldes", { :controller => "moldes", :action => "index" })
+  get("/moldes/:id_to_display", { :controller => "moldes", :action => "show" })
+
+  # UPDATE
+  get("/moldes/:prefill_with_id/edit", { :controller => "moldes", :action => "edit_form" })
+  post("/update_molde/:id_to_modify", { :controller => "moldes", :action => "update_row" })
+
+  # DELETE
+  get("/delete_molde/:id_to_remove", { :controller => "moldes", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Eje resource:
 
   # CREATE
