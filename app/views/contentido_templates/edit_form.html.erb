@@ -15,7 +15,7 @@
     </label>
 
     <!-- Input for eje_id start -->
-    <input type="text" id="eje_id" name="eje_id" class="form-control" value="<%= @contentido.eje_id %>">
+    <%= select_tag(:eje_id, options_from_collection_for_select(Eje.all, :id, :created_at, @contentido.eje_id), :class => "form-control") %>
     <!-- Input for eje_id end -->
   </div>
   <!-- Label and input for eje_id end -->
