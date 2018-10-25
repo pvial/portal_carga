@@ -1,6 +1,9 @@
 class Ejercicio < ApplicationRecord
   # Direct associations
 
+  belongs_to :molde,
+             :counter_cache => true
+
   belongs_to :contenido,
              :class_name => "Contentido"
 
