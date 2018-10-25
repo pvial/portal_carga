@@ -4,6 +4,8 @@ RSpec.describe Contentido, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:ejercicios) }
+
     it { should have_many(:drafts) }
 
     end
