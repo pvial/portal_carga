@@ -54,7 +54,11 @@
 
         <!-- Display contentido.eje_id start -->
         <td>
-          <%= contentido.eje.created_at %>
+          <% if contentido.eje.present? %>
+            <a href="/ejes/<%= contentido.eje.id %>">
+              <%= contentido.eje.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display contentido.eje_id end -->
 

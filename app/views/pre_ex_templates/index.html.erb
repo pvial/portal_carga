@@ -118,13 +118,21 @@
 
         <!-- Display pre_ex.contenido_id start -->
         <td>
-          <%= pre_ex.contenido.eje_id %>
+          <% if pre_ex.contenido.present? %>
+            <a href="/contentidos/<%= pre_ex.contenido.id %>">
+              <%= pre_ex.contenido.eje_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display pre_ex.contenido_id end -->
 
         <!-- Display pre_ex.molde_id start -->
         <td>
-          <%= pre_ex.molde.created_at %>
+          <% if pre_ex.molde.present? %>
+            <a href="/moldes/<%= pre_ex.molde.id %>">
+              <%= pre_ex.molde.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display pre_ex.molde_id end -->
 

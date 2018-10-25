@@ -34,7 +34,11 @@
       </dt>
       <!-- Display eje_id start -->
       <dd>
-        <%= @contentido.eje_id %>
+        <% if @contentido.eje.present? %>
+          <a href="/ejes/<%= @contentido.eje_id %>">
+            <%= @contentido.eje.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display eje_id end -->
 

@@ -34,7 +34,11 @@
       </dt>
       <!-- Display contenido_id start -->
       <dd>
-        <%= @pre_ex.contenido_id %>
+        <% if @pre_ex.contenido.present? %>
+          <a href="/contentidos/<%= @pre_ex.contenido_id %>">
+            <%= @pre_ex.contenido.eje_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display contenido_id end -->
 
@@ -43,7 +47,11 @@
       </dt>
       <!-- Display molde_id start -->
       <dd>
-        <%= @pre_ex.molde_id %>
+        <% if @pre_ex.molde.present? %>
+          <a href="/moldes/<%= @pre_ex.molde_id %>">
+            <%= @pre_ex.molde.created_at %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display molde_id end -->
 

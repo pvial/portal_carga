@@ -148,7 +148,11 @@
 
         <!-- Display ejercicio.contenido_id start -->
         <td>
-          <%= ejercicio.contenido.eje_id %>
+          <% if ejercicio.contenido.present? %>
+            <a href="/contentidos/<%= ejercicio.contenido.id %>">
+              <%= ejercicio.contenido.eje_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display ejercicio.contenido_id end -->
 
@@ -166,7 +170,11 @@
 
         <!-- Display ejercicio.molde_id start -->
         <td>
-          <%= ejercicio.molde.created_at %>
+          <% if ejercicio.molde.present? %>
+            <a href="/moldes/<%= ejercicio.molde.id %>">
+              <%= ejercicio.molde.created_at %>
+            </a>
+          <% end %>
         </td>
         <!-- Display ejercicio.molde_id end -->
 
@@ -262,19 +270,31 @@
 
         <!-- Display ejercicio.last_pre_ex_id start -->
         <td>
-          <%= ejercicio.last_pre_ex.contenido_id %>
+          <% if ejercicio.last_pre_ex.present? %>
+            <a href="/pre_exes/<%= ejercicio.last_pre_ex.id %>">
+              <%= ejercicio.last_pre_ex.contenido_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display ejercicio.last_pre_ex_id end -->
 
         <!-- Display ejercicio.creador_id start -->
         <td>
-          <%= ejercicio.creador.email %>
+          <% if ejercicio.creador.present? %>
+            <a href="/creadors/<%= ejercicio.creador.id %>">
+              <%= ejercicio.creador.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display ejercicio.creador_id end -->
 
         <!-- Display ejercicio.aprobador_id start -->
         <td>
-          <%= ejercicio.aprobador.email %>
+          <% if ejercicio.aprobador.present? %>
+            <a href="/aprobadors/<%= ejercicio.aprobador.id %>">
+              <%= ejercicio.aprobador.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display ejercicio.aprobador_id end -->
 
