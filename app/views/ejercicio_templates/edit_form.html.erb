@@ -260,15 +260,6 @@
   <!-- Label and input for last_pre_ex_id end -->
 
   <!-- Label and input for creador_id start -->
-  <div class="form-group">
-    <label for="creador_id">
-      Creador
-    </label>
-
-    <!-- Input for creador_id start -->
-    <%= select_tag(:creador_id, options_from_collection_for_select(Creador.all, :id, :email, @ejercicio.creador_id), :class => "form-control") %>
-    <!-- Input for creador_id end -->
-  </div>
   <!-- Label and input for creador_id end -->
 
   <!-- Label and input for aprobador_id start -->

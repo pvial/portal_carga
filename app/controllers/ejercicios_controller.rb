@@ -191,7 +191,7 @@ class EjerciciosController < ApplicationController
     @ejercicio.dificultad = params.fetch("dificultad")
     @ejercicio.habilidad = params.fetch("habilidad")
     @ejercicio.last_pre_ex_id = params.fetch("last_pre_ex_id")
-    @ejercicio.creador_id = params.fetch("creador_id")
+    
     @ejercicio.aprobador_id = params.fetch("aprobador_id")
 
     if @ejercicio.valid?
