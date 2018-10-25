@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :creadors
+  # Routes for the Creador resource:
+
+  # READ
+  get("/creadors", { :controller => "creadors", :action => "index" })
+  get("/creadors/:id_to_display", { :controller => "creadors", :action => "show" })
+
+  #------------------------------
+
   # Routes for the Molde resource:
 
   # CREATE
