@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Eje resource:
+
+  # CREATE
+  get("/ejes/new", { :controller => "ejes", :action => "new_form" })
+  post("/create_eje", { :controller => "ejes", :action => "create_row" })
+
+  # READ
+  get("/ejes", { :controller => "ejes", :action => "index" })
+  get("/ejes/:id_to_display", { :controller => "ejes", :action => "show" })
+
+  # UPDATE
+  get("/ejes/:prefill_with_id/edit", { :controller => "ejes", :action => "edit_form" })
+  post("/update_eje/:id_to_modify", { :controller => "ejes", :action => "update_row" })
+
+  # DELETE
+  get("/delete_eje/:id_to_remove", { :controller => "ejes", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Ejercicio resource:
 
   # CREATE

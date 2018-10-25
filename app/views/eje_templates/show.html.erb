@@ -1,0 +1,55 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Eje #<%= @eje.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/ejes" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link eje start -->
+      <div class="col">
+        <a href="/ejes/<%= @eje.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit eje
+        </a>
+      </div>
+      <!-- Edit link eje end -->
+
+      <!-- Delete link eje start -->
+      <div class="col">
+        <a href="/delete_eje/<%= @eje.id %>" class="btn btn-block btn-outline-secondary">
+          Delete eje
+        </a>
+      </div>
+      <!-- Delete link eje end -->
+    </div>
+
+    <dl>
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@eje.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@eje.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
