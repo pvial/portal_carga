@@ -1,6 +1,8 @@
 class Contentido < ApplicationRecord
   # Direct associations
 
+  belongs_to :eje
+
   has_many   :ejercicios,
              :foreign_key => "contenido_id"
 
