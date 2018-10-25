@@ -95,6 +95,46 @@ class EjerciciosController < ApplicationController
     end
   end
 
+  def destroy_row_from_last_pre_ex
+    @ejercicio = Ejercicio.find(params.fetch("id_to_remove"))
+
+    @ejercicio.destroy
+
+    redirect_to("/pre_exes/#{@ejercicio.last_pre_ex_id}", notice: "Ejercicio deleted successfully.")
+  end
+
+  def destroy_row_from_contenido
+    @ejercicio = Ejercicio.find(params.fetch("id_to_remove"))
+
+    @ejercicio.destroy
+
+    redirect_to("/contentidos/#{@ejercicio.contenido_id}", notice: "Ejercicio deleted successfully.")
+  end
+
+  def destroy_row_from_molde
+    @ejercicio = Ejercicio.find(params.fetch("id_to_remove"))
+
+    @ejercicio.destroy
+
+    redirect_to("/moldes/#{@ejercicio.molde_id}", notice: "Ejercicio deleted successfully.")
+  end
+
+  def destroy_row_from_creador
+    @ejercicio = Ejercicio.find(params.fetch("id_to_remove"))
+
+    @ejercicio.destroy
+
+    redirect_to("/creadors/#{@ejercicio.creador_id}", notice: "Ejercicio deleted successfully.")
+  end
+
+  def destroy_row_from_aprobador
+    @ejercicio = Ejercicio.find(params.fetch("id_to_remove"))
+
+    @ejercicio.destroy
+
+    redirect_to("/aprobadors/#{@ejercicio.aprobador_id}", notice: "Ejercicio deleted successfully.")
+  end
+
   def destroy_row
     @ejercicio = Ejercicio.find(params.fetch("id_to_remove"))
 

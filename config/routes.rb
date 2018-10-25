@@ -74,6 +74,11 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_ejercicio/:id_to_remove", { :controller => "ejercicios", :action => "destroy_row" })
+  get("/delete_ejercicio_from_aprobador/:id_to_remove", { :controller => "ejercicios", :action => "destroy_row_from_aprobador" })
+  get("/delete_ejercicio_from_creador/:id_to_remove", { :controller => "ejercicios", :action => "destroy_row_from_creador" })
+  get("/delete_ejercicio_from_molde/:id_to_remove", { :controller => "ejercicios", :action => "destroy_row_from_molde" })
+  get("/delete_ejercicio_from_contenido/:id_to_remove", { :controller => "ejercicios", :action => "destroy_row_from_contenido" })
+  get("/delete_ejercicio_from_last_pre_ex/:id_to_remove", { :controller => "ejercicios", :action => "destroy_row_from_last_pre_ex" })
 
   #------------------------------
 
@@ -93,6 +98,7 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_contentido/:id_to_remove", { :controller => "contentidos", :action => "destroy_row" })
+  get("/delete_contentido_from_eje/:id_to_remove", { :controller => "contentidos", :action => "destroy_row_from_eje" })
 
   #------------------------------
 
@@ -112,6 +118,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_pre_ex/:id_to_remove", { :controller => "pre_exes", :action => "destroy_row" })
+  get("/delete_pre_ex_from_molde/:id_to_remove", { :controller => "pre_exes", :action => "destroy_row_from_molde" })
+  get("/delete_pre_ex_from_contenido/:id_to_remove", { :controller => "pre_exes", :action => "destroy_row_from_contenido" })
 
   #------------------------------
 

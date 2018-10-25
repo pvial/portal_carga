@@ -83,6 +83,22 @@ class PreExesController < ApplicationController
     end
   end
 
+  def destroy_row_from_contenido
+    @pre_ex = PreEx.find(params.fetch("id_to_remove"))
+
+    @pre_ex.destroy
+
+    redirect_to("/contentidos/#{@pre_ex.contenido_id}", notice: "PreEx deleted successfully.")
+  end
+
+  def destroy_row_from_molde
+    @pre_ex = PreEx.find(params.fetch("id_to_remove"))
+
+    @pre_ex.destroy
+
+    redirect_to("/moldes/#{@pre_ex.molde_id}", notice: "PreEx deleted successfully.")
+  end
+
   def destroy_row
     @pre_ex = PreEx.find(params.fetch("id_to_remove"))
 

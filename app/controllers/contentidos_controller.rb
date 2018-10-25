@@ -51,6 +51,14 @@ class ContentidosController < ApplicationController
     end
   end
 
+  def destroy_row_from_eje
+    @contentido = Contentido.find(params.fetch("id_to_remove"))
+
+    @contentido.destroy
+
+    redirect_to("/ejes/#{@contentido.eje_id}", notice: "Contentido deleted successfully.")
+  end
+
   def destroy_row
     @contentido = Contentido.find(params.fetch("id_to_remove"))
 

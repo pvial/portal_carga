@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Contentidos
+
+    <a data-toggle="collapse" href="#eje_contentidos_new_form">
+      Add contentido
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @eje.contentidos.each do |contentido| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/contentidos/<%= contentido.id %>">
+          <%= contentido.eje_id %>
+        </a>
+        <!-- Show link end -->
+
+        <!-- Delete link start -->
+        <a href="/delete_contentido_from_eje/<%= contentido.id %>">
+          Delete
+        </a>
+        <!-- Delete link end -->
+
+      </li>
+    <% end %>
+
+    <div class="card-footer">
+      <div class="collapse" id="eje_contentidos_new_form">
+        <!-- New associationcollection form start -->
+
+        <!-- New associationcollection form end -->
+      </div>
+    </div>
+
+  </ul>
+</div>
